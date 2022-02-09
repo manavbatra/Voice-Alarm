@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity"
+    android:background="@color/colorAccent"
+    android:weightSum="1"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_about"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="32dp"
+        style="@style/headerBar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ImageView
+        android:id="@+id/aboutImageView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:maxHeight="100dp"
+        android:minHeight="30dp"
+        android:maxWidth="100dp"
+        android:minWidth="30dp"
+        android:contentDescription="@string/image_content_description"
+        app:srcCompat="@mipmap/ic_new_launcher_icon_foreground"
+        android:layout_weight="0.3"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/app_name_version_text"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="15dp"
+        android:isScrollContainer="true"
+        android:text="@string/app_about_info"
+        android:textColor="@color/activityBg"
+        />
+
+    <TextView
+        android:id="@+id/dev_info_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="bottom|center"
+        android:text="@string/dev_contact_textView"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.05"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="bottom|center"
+        android:textColor="@color/dark_bg"
+        android:text="@string/dev_name_textView"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/email_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.05"
+        android:padding="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:onClick="goToEmail"
+        android:text="@string/dev_email_textView"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="18sp"
+        android:background="@color/activityBg"/>
+
+
+</LinearLayout>

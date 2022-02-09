@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:isScrollContainer="true"
+    tools:actionBarNavMode="standard"
+    tools:context=".FullscreenActivity">
+
+    <TimePicker
+        android:id="@+id/timePicker1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:timePickerMode="spinner" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/timePicker1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-5286395253594975/7120023768"/>
+
+    <ScrollView
+        android:id="@+id/alarm_options_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linear_layout_id"
+        android:layout_below="@id/adView"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/colorAccent"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/alarm_name_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/alarm_name_hint"
+                android:imeOptions="actionDone"
+                android:inputType="textShortMessage|text"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHighlight="@color/hintTextColor"
+                android:textColorHint="@color/hintTextColor"
+                android:textColorLink="@color/hintTextColor"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:drawableStart="@drawable/ic_edit_icon"
+                android:drawablePadding="2dp"
+                android:textSize="22sp"
+                android:importantForAutofill="no" />
+
+            <!--  TODO: Give the user an option to choose from a number of different
+                   strings. Perhaps picker or dropdown of some sort.-->
+
+            <!-- DAYS OF THE WEEK CONTAINER -->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:divider="@color/colorPrimary"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:id="@+id/toggleButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:textOff="S"
+                    android:textOn="S"
+                    android:onClick="toggleButtonClick"
+                    android:textSize="14sp" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:textOff="M"
+                    android:textOn="M"
+                    android:onClick="toggleButtonClick"
+                    android:textSize="14sp" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:textOff="T"
+                    android:textOn="T"
+                    android:onClick="toggleButtonClick"
+                    android:textSize="14sp" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:textOff="W"
+                    android:textOn="W"
+                    android:onClick="toggleButtonClick"
+                    android:textSize="14sp" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:textOff="T"
+                    android:textOn="T"
+                    android:onClick="toggleButtonClick"
+                    android:textSize="14sp" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:textOff="F"
+                    android:textOn="F"
+                    android:onClick="toggleButtonClick"
+                    android:textSize="14sp" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorAccent"
+                    android:textOff="S"
+                    android:textOn="S"
+                    android:onClick="toggleButtonClick"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="?android:attr/listDivider"
+                android:backgroundTint="@color/colorPrimaryDark"/>
+
+            <!-- ============================================ -->
+
+            <!-- ALARM SOUND AND BUTTON CONTAINER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="setAlarmSound"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sound"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:drawableStart="@drawable/ic_music_icon"
+                    android:drawablePadding="2dp"
+                    android:onClick="setAlarmSound"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/alarm_sound_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Default tone"
+                    android:textAlignment="textEnd"
+                    android:layout_gravity="bottom"
+                    android:gravity="end"
+                    android:textColor="@color/hintTextColor"
+                    android:textSize="16sp" />
+
+            </LinearLayout> <!-- ENDING ALARM SOUND CONTAINER -->
+
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="6dp"
+                android:background="?android:attr/listDivider"
+                android:backgroundTint="@color/colorPrimaryDark"/>
+
+            <!-- ============================================ -->
+
+            <!-- ALARM VIBRATION AND SWITCH CONTAINER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Vibration"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:drawableStart="@drawable/ic_vibration_icon"
+                    android:drawablePadding="2dp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/alarm_vibration_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="setAlarmVibration"
+                    android:textSize="24sp"
+                    android:thumbTint="@color/colorPrimaryDark"
+                    />
+
+            </LinearLayout> <!-- ENDING VIBRATION AND SWITCH -->
+
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="6dp"
+                android:background="?android:attr/listDivider"
+                android:backgroundTint="@color/colorPrimaryDark"/>
+
+            <!-- ============================================ -->
+
+            <!-- ALARM SNOOZE AND SWITCH CONTAINER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="setAlarmSnooze">
+
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Snooze"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="setAlarmSnooze"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/ic_snooze_icon"
+                    android:drawablePadding="2dp"/>
+
+                <Switch
+                    android:id="@+id/alarm_snooze_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:focusable="true"
+                    android:textSize="24sp"
+                    android:thumbTint="@color/colorPrimaryDark"
+                    android:buttonTint="@color/colorPrimaryDark"/>
+            </LinearLayout> <!-- ENDING SNOOZE AND SWITCH -->
+
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="6dp"
+                android:background="?android:attr/listDivider" />
+
+
+        </LinearLayout> <!-- ENDING OUTER LINEAR VIEW CONTAINER -->
+
+
+    </ScrollView>
+
+    <!-- ====================================================== -->
+
+    <!-- CANCEL AND SET BUTTON CONTAINER -->
+    <LinearLayout
+        android:id="@+id/linear_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/cancel_button_id"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/round_red_bg"-->
+<!--            android:textColor="@color/activityBg"-->
+<!--            android:elevation="4dp"-->
+<!--            android:padding="16dp"-->
+<!--            android:layout_weight="0.5"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:onClick="goBackToMain"-->
+<!--            android:clickable="true"-->
+<!--            android:focusable="true"-->
+<!--            android:foreground="?android:attr/selectableItemBackgroundBorderless"-->
+<!--            android:src="@drawable/ic_cancel_icon"-->
+<!--            android:contentDescription="cancel_button"/>-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/set_button_id"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/round_red_bg"-->
+<!--            android:elevation="4dp"-->
+<!--            android:padding="16dp"-->
+<!--            android:layout_weight="0.5"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:onClick="setAlarm"-->
+<!--            android:clickable="true"-->
+<!--            android:focusable="true"-->
+<!--            android:foreground="?android:attr/selectableItemBackgroundBorderless"-->
+<!--            android:src="@drawable/ic_check_icon"-->
+<!--            android:contentDescription="set_button"/>-->
+
+        <Button
+            android:id="@+id/cancel_button_id"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="25dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/ic_cancel_icon"
+            android:onClick="goBackToMain"
+            android:shadowColor="@color/hintTextColor"
+            android:textAlignment="center"
+            android:textColor="@color/colorSecondary"
+            />
+
+        <Button
+            android:id="@+id/set_button_id"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="25dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="@drawable/ic_check_icon"
+            android:onClick="setAlarm"
+            android:shadowColor="@color/hintTextColor"
+            android:textColor="@color/colorSecondary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout> <!-- ENDING CANCEL AND SET BUTTON CONTAINER -->
+
+
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<!DOCTYPE resources [<!ENTITY appname "Voice Alarm">]>
+
+
+<resources>
+    <string name="app_name">Voice Alarm</string>
+    <string name="alarm_text_id">Alarm</string>
+
+    <!-- MAIN ACTIVITY -->
+    <string name="info_text">You have %1$d alarms.</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_about">About</string>
+    <string name="scheduled_textView_string">Scheduled:</string>
+    <string name="no_alarms_set_string">No active alarms.</string>
+    <string name="one_alarm_set_string">1 active alarm.</string>
+    <string name="active_alarms_set_string">%1$d active alarms.</string>
+
+    <!-- FULLSCREEN ACTIVITY -->
+    <string name="alarm_name_hint">My Alarm</string>
+    <string name="cancel_button_text">Cancel</string>
+    <string name="set_button_text">Set</string>
+
+    <!-- ABOUT ACTIVITY -->
+    <string name="image_content_description">voice alarm image</string>
+    <string name="app_name_version_text">Voice Alarm 2.0</string>
+    <string name="app_about_info">
+        <i><b>What?</b></i> ❓\nThis is a unique alarm app that is
+        determined to wake you up in the morning 😎\n\n
+        <i><b>How?</b></i> 🤔\nWhen the alarm goes off, it can only be dismissed by reading
+        aloud into the phone\'s mic, the text/passage the alarm shows you on the screen.\nThis
+        engages the sleepy 😴 user into opening their eyes, making effort to read something
+        and thus, instigating their groggy mind to wake up. \n\n
+        <i><b>Why?</b></i> 🤨\nHaven\'t you heard? You snooze, you lose!
+    </string>
+    <string name="dev_email_textView">manavbatra26@gmail.com</string>
+    <string name="dev_name_textView">ManavbDevCreations</string>
+    <string name="dev_contact_textView">Developer contact:</string>
+
+    <!-- ALARM_PAGE ACTIVITY -->
+    <string name="title_activity_alarm_page">AlarmPageActivity</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="voice_alarm_image_text">voice alarm image</string>
+
+    <string name="title_activity_alarm_show">AlarmShowActivity</string>
+    <string name="alarm_page_activity_icon_content_description">Alarm App icon for identity purposes</string>
+
+
+    <!-- DIALOG FRAGMENT -->
+    <string name="overlay_permission_dialog_msg">We need your permission to display Alarms on top of other apps,
+        to ensure that you never miss an alarm and always get notified on time.
+        \n\nKindly, grant permissions in Settings for &appname; App</string>
+    <string name="overlay_permission_dialog_title">Permission Required</string>
+    <string name="permissions_dialog_cancelled_msg">The app will not be able to draw alarms over other apps now.</string>
+
+    <string name="title_activity_alarm_page2">It\'s time</string>
+
+</resources>

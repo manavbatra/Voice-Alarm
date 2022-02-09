@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/insideDarkLight</color>
+    <color name="colorPrimaryDark">@color/insideColor</color>
+    <color name="colorAccent">@color/textColor</color> <!-- used to be dd102c -->
+    <color name="colorSecondary">@color/redColor</color>
+
+    <color name="activityBg">#E6E4F1</color>
+    <color name="insideColor">#574d93</color><!-- same as enabled alarm color-->
+    <color name="insideDark">#3F386B</color>
+    <color name="redColor">#DB5A42</color>
+    <color name="textColor">#E5DADA</color>
+    <color name="insideDarkLight">#a7a1ce</color>
+    <color name="enabledAlarmColor">#574d93</color>
+    <color name="disabledAlarmColor">#a7a1ce</color>
+
+    <color name="hintTextColor">#66000000</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="disabledTextColor">#7f7f7f</color>
+    <color name="dark_bg">#FF424242</color>
+    <color name="black_bg">#000000</color>
+</resources>
